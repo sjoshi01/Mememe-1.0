@@ -13,6 +13,7 @@
 		D2A5A38F2429495A00ED6C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5A38D2429495A00ED6C18 /* Main.storyboard */; };
 		D2A5A3912429495C00ED6C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5A3902429495C00ED6C18 /* Assets.xcassets */; };
 		D2A5A3942429495C00ED6C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5A3922429495C00ED6C18 /* LaunchScreen.storyboard */; };
+		D2A5A39C242A898500ED6C18 /* Mememe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5A39B242A898500ED6C18 /* Mememe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D2A5A3902429495C00ED6C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A5A3932429495C00ED6C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2A5A3952429495C00ED6C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2A5A39B242A898500ED6C18 /* Mememe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mememe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D2A5A3902429495C00ED6C18 /* Assets.xcassets */,
 				D2A5A3922429495C00ED6C18 /* LaunchScreen.storyboard */,
 				D2A5A3952429495C00ED6C18 /* Info.plist */,
+				D2A5A39B242A898500ED6C18 /* Mememe.swift */,
 			);
 			path = "Mememe 1.0";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2A5A38C2429495A00ED6C18 /* ViewController.swift in Sources */,
+				D2A5A39C242A898500ED6C18 /* Mememe.swift in Sources */,
 				D2A5A3882429495A00ED6C18 /* AppDelegate.swift in Sources */,
 				D2A5A38A2429495A00ED6C18 /* SceneDelegate.swift in Sources */,
 			);
@@ -285,6 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6Z9PHWB6X;
 				INFOPLIST_FILE = "Mememe 1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6Z9PHWB6X;
 				INFOPLIST_FILE = "Mememe 1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

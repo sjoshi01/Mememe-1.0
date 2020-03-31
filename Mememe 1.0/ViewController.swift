@@ -130,7 +130,11 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
         return memedImage
     }
     
-   
+    func save() {
+        _ = Mememe(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: self.memedImage)
+                   print("image saved")
+    }
+    
     @IBAction func shareMeme(_ sender: Any) {
         memedImage = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [memedImage!]
@@ -141,16 +145,16 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
                 print("cancelled")
                 return
             }
-            _ = Mememe(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: self.memedImage)
-            print("image saved")
+            self.save()
         }
         
     }
     
     @IBAction func cancelButton(_ sender: Any) {
         imageView.image = nil
-        topTextField.text = "TOP"
-        bottomTextField.text = "BOTTOM"
+        setTextFieldProperties(topTextField)
+        setTextFieldProperties(bottomTextField)
+        shareButton.isEnabled = false
     }
     
 }

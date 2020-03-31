@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sth-Ic-3Pc">
-                                <rect key="frame" x="44" y="44" width="808" height="242"/>
+                                <rect key="frame" x="44" y="44" width="808" height="247"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="oGD-fZ-xCs" userLabel="Top Text Field">
                                 <rect key="frame" x="44" y="128" width="808" height="40"/>
@@ -27,7 +27,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="lb6-Xb-HuQ" userLabel="Bottom Text Field">
-                                <rect key="frame" x="44" y="147" width="808" height="40"/>
+                                <rect key="frame" x="44" y="152" width="808" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VGg-JB-1DV"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Id7-I7-azW">
-                                <rect key="frame" x="44" y="286" width="808" height="49"/>
+                                <rect key="frame" x="44" y="291" width="808" height="44"/>
                                 <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <items>
                                     <barButtonItem image="camera-icon" width="42" style="plain" id="dEq-qP-t3x" userLabel="Camera Button">
@@ -113,7 +113,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera-icon" width="128" height="128"/>
+        <image name="camera-icon" width="90" height="90"/>
         <image name="share-icon" width="128" height="128"/>
     </resources>
 </document>

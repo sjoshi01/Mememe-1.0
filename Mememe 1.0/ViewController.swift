@@ -21,8 +21,6 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
     @IBOutlet weak var shareButton: UIBarButtonItem!
     var memedImage: UIImage!
     
-   
-    
     let memeTextAttributes:[NSAttributedString.Key:Any] = [
            NSAttributedString.Key.strokeColor : UIColor.black,
            NSAttributedString.Key.foregroundColor : UIColor.white,
@@ -43,6 +41,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
          cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera)
         shareButton.isEnabled = false
     }
+    
     // MARK: - Textfield functions
     
     func setTextFieldProperties(_ textField : UITextField) {
@@ -99,9 +98,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
               imagePickerController.sourceType = .camera
               present(imagePickerController, animated: true, completion: nil)
     }
-    
-    
-   
+       
     @IBAction func pickImage(_ sender: Any) {
         let imagePickercontroller = UIImagePickerController()
                imagePickercontroller.delegate = self

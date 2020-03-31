@@ -10,8 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     
-    @IBOutlet weak var navBar: UINavigationBar!
+    // MARK: Variables and arrtributes declaration
     
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
@@ -42,6 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
          cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera)
         shareButton.isEnabled = false
     }
+    // MARK: - Textfield functions
     
     func setTextFieldProperties(_ textField : UITextField) {
            textField.text =  textField == topTextField ? "TOP" :  "BOTTOM"
@@ -89,6 +91,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
            }
        }
     
+    //MARK: Image functions
     
     @IBAction func cameraClicked(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
@@ -134,6 +137,8 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
         _ = Mememe(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: self.memedImage)
                    print("image saved")
     }
+    
+    // MARK: Share image or cancel functions
     
     @IBAction func shareMeme(_ sender: Any) {
         memedImage = generateMemedImage()

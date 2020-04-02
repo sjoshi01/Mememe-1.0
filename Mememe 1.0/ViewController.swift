@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
     let memeTextAttributes:[NSAttributedString.Key:Any] = [
            NSAttributedString.Key.strokeColor : UIColor.black,
            NSAttributedString.Key.foregroundColor : UIColor.white,
-           NSAttributedString.Key.font : UIFont.init(name: "Menlo-Bold", size: 25.0)!
+           NSAttributedString.Key.font : UIFont.init(name: "impact", size: 30.0)!
        ]
     
     override func viewDidLoad() {
@@ -47,6 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
     func setTextFieldProperties(_ textField : UITextField) {
            textField.text =  textField == topTextField ? "TOP" :  "BOTTOM"
            textField.backgroundColor = UIColor.clear
+           textField.adjustsFontSizeToFitWidth = true
            textField.defaultTextAttributes = memeTextAttributes
            textField.textAlignment = NSTextAlignment.center
            textField.delegate = self
@@ -119,19 +120,22 @@ class ViewController: UIViewController, UITextFieldDelegate,UINavigationControll
     }
     
     func generateMemedImage() -> UIImage {
-        toolBar.isHidden = true
-        navBar.isHidden = true
+        setVisibilityOfBars(true)
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        toolBar.isHidden = false
-        navBar.isHidden = false
+        setVisibilityOfBars(false)
         return memedImage
     }
     
+    func setVisibilityOfBars(_ val : Bool) {
+        toolBar.isHidden = val
+        navBar.isHidden = val
+    }
+    
     func save() {
-        _ = Mememe(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: self.memedImage)
+        _ = MemeMe(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: self.memedImage)
                    print("image saved")
     }
     
